@@ -1,0 +1,52 @@
+{
+  "id": "ef08d010-1a1d-11ee-a0e0-239546c4b809",
+  "name": "PublishVSExtensionUsingSP",
+  "friendlyName": "Publish visual studio extension using service principal",
+  "description": "This task publishes a visual studio extension using a service principal.",
+  "author": "Deepam Sarmah",
+  "helpMarkDown": "[More Information](https://github.com/t-dsarmah/Publish-Visual-Studio-Extension-Using-SP)",
+  "category": "Utility",
+  "visibility": [
+    "Build",
+    "Release"
+  ],
+  "demands": [],
+  "version": {
+    "Major": "1",
+    "Minor": "0",
+    "Patch": "0"
+  },
+  "minimumAgentVersion": "1.95.0",
+  "instanceNameFormat": "PublishVSExtensionUsingSP $(message)",
+  "inputs": [
+    {
+      "name": "TenantID",
+      "type": "string",
+      "label": "Tenant ID of service principal",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Tenant ID of service principal"
+    },
+    {
+      "name": "ManifestFile",
+      "type": "string",
+      "label": "Extension manifest file",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "Extension manifest file relative to the source directory. Example: vss-extension.json"
+    },
+    {
+      "name": "ManifestFolder",
+      "type": "string",
+      "label": "Extension manifest folder",
+      "defaultValue": "",
+      "required": false,
+      "helpMarkDown": "Path to the folder containing the extension manifest file relative to source directory. Leave empty if the manifest file is in the root of the source directory."
+    }
+  ],
+  "execution": {
+    "PowerShell3": {
+      "target": "task.ps1"
+    }
+  }
+}

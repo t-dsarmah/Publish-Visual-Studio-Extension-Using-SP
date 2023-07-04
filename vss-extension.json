@@ -1,0 +1,51 @@
+{
+    "manifestVersion": 1,
+    "id": "PublishVSExtensionUsingSP",
+    "name": "Publish Visual Studio Extension Using Service Principal",
+    "version": "1.0.0",
+    "publisher": "dsarmah",
+    "tags": [
+        "Service Principal",
+        "Azure Pipelines",
+        "Azure DevOps Extensions"
+      ],
+    "icons": {
+        "default": "images/icon.png",
+        "large": "images/icon-large.png"
+    },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "A task that publishes a visual studio extension using a service principal.",
+    "categories": [
+        "Azure Pipelines"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/t-dsarmah/Publish-Visual-Studio-Extension-Using-SP"
+    },
+    "content": {
+        "details": {
+            "path": "README.md"
+        }
+    },
+    "files": [
+        {
+            "path": "PublishVSExtensionUsingSP"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "PublishVSExtensionUsingSP",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "PublishVSExtensionUsingSP"
+            }
+        }
+    ]
+}
